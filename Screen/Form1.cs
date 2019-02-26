@@ -75,268 +75,267 @@ namespace Screen
                         {
                             ShowVideo2();
                         }
-                         break;
+                        break;
                     case "3":
-                         if (m_lRealHandle3 != -1)
-                         {
-                             PanelSizeLarge(panel3);
-                         }
-                         else if (m_lRealHandle3 == -1)
-                         {
-                             ShowVideo3();
-                         }
-                         break;
+                        if (m_lRealHandle3 != -1)
+                        {
+                            PanelSizeLarge(panel3);
+                        }
+                        else if (m_lRealHandle3 == -1)
+                        {
+                            ShowVideo3();
+                        }
+                        break;
                     case "4":
-                         if (m_lRealHandle4 != -1)
-                         {
-                             PanelSizeLarge(panel4);
-                         }
-                         else if (m_lRealHandle4 == -1)
-                         {
-                             ShowVideo4();
-                         }
-                         //PanelSizeLarge(panel4);
-                         break;
+                        if (m_lRealHandle4 != -1)
+                        {
+                            PanelSizeLarge(panel4);
+                        }
+                        else if (m_lRealHandle4 == -1)
+                        {
+                            ShowVideo4();
+                        }
+                        break;
                     case "5":
-                         { 
-                            if(count==1)
+                        {
+                            if (count == 1)
                                 PanelSizeSmall(panel1);
-                            else if(count==2)
+                            else if (count == 2)
                                 PanelSizeSmall(panel2);
                             else if (count == 3)
                                 PanelSizeSmall(panel3);
                             else if (count == 4)
                                 PanelSizeSmall(panel4);
                             break;
-                         }
+                        }
                     case "6":
-                         {
-                             if (m_lRealHandle1 != -1 && m_bRecord1 == false)   //确保视频开启成功
-                             {
-                                 string videofile1 = @"录像视频\video1.mp4";
-                                 //强制I帧 Make one key frame
-                                 //通道号 Channel number
-                                 CHCNetSDK.NET_DVR_MakeKeyFrame(m_lUserID1, 1);
+                        {
+                            if (m_lRealHandle1 != -1 && m_bRecord1 == false)   //确保视频开启成功
+                            {
+                                string videofile1 = @"录像视频\video1.mp4";
+                                //强制I帧 Make one key frame
+                                //通道号 Channel number
+                                CHCNetSDK.NET_DVR_MakeKeyFrame(m_lUserID1, 1);
 
-                                 //开始录像 Start recording
-                                 if (!CHCNetSDK.NET_DVR_SaveRealData(m_lRealHandle1, videofile1))
-                                 {
-                                     return;
-                                 }
-                                 m_bRecord1 = true;
-                             }
-                             else if (m_lRealHandle1 != -1 && m_bRecord1 == true)
-                             {
-                                     //停止录像 Stop recording
-                                     if (!CHCNetSDK.NET_DVR_StopSaveRealData(m_lRealHandle1))
-                                     {
-                                         return;
-                                     }
-                                     m_bRecord1 = false;        
-                             }
-                             break;
-                         }
+                                //开始录像 Start recording
+                                if (!CHCNetSDK.NET_DVR_SaveRealData(m_lRealHandle1, videofile1))
+                                {
+                                    return;
+                                }
+                                m_bRecord1 = true;
+                            }
+                            else if (m_lRealHandle1 != -1 && m_bRecord1 == true)
+                            {
+                                //停止录像 Stop recording
+                                if (!CHCNetSDK.NET_DVR_StopSaveRealData(m_lRealHandle1))
+                                {
+                                    return;
+                                }
+                                m_bRecord1 = false;
+                            }
+                            break;
+                        }
                     case "7":
-                         {
-                             if (m_lRealHandle2 != -1 && m_bRecord2 == false)   //确保视频开启成功
-                             {
-                                 string videofile2 = @"录像视频\video2.mp4";
-                                 //强制I帧 Make one key frame
-                                 //通道号 Channel number
-                                 CHCNetSDK.NET_DVR_MakeKeyFrame(m_lUserID2, 1);
+                        {
+                            if (m_lRealHandle2 != -1 && m_bRecord2 == false)   //确保视频开启成功
+                            {
+                                string videofile2 = @"录像视频\video2.mp4";
+                                //强制I帧 Make one key frame
+                                //通道号 Channel number
+                                CHCNetSDK.NET_DVR_MakeKeyFrame(m_lUserID2, 1);
 
-                                 //开始录像 Start recording
-                                 if (!CHCNetSDK.NET_DVR_SaveRealData(m_lRealHandle2, videofile2))
-                                 {
-                                     return;
-                                 }
-                                 m_bRecord2 = true;
-                             }
-                             else if (m_lRealHandle2 != -1 && m_bRecord2 == true)
-                             {
-                                 //停止录像 Stop recording
-                                 if (!CHCNetSDK.NET_DVR_StopSaveRealData(m_lRealHandle2))
-                                 {
-                                     return;
-                                 }
-                                 m_bRecord2 = false;
-                             }
-                             break;
-                         }
+                                //开始录像 Start recording
+                                if (!CHCNetSDK.NET_DVR_SaveRealData(m_lRealHandle2, videofile2))
+                                {
+                                    return;
+                                }
+                                m_bRecord2 = true;
+                            }
+                            else if (m_lRealHandle2 != -1 && m_bRecord2 == true)
+                            {
+                                //停止录像 Stop recording
+                                if (!CHCNetSDK.NET_DVR_StopSaveRealData(m_lRealHandle2))
+                                {
+                                    return;
+                                }
+                                m_bRecord2 = false;
+                            }
+                            break;
+                        }
                     case "8":
-                         {
-                             if (m_lRealHandle3 != -1 && m_bRecord3 == false)   //确保视频开启成功
-                             {
-                                 string videofile3 = @"录像视频\video3.mp4";
-                                 //强制I帧 Make one key frame
-                                 //通道号 Channel number
-                                 CHCNetSDK.NET_DVR_MakeKeyFrame(m_lUserID3, 1);
+                        {
+                            if (m_lRealHandle3 != -1 && m_bRecord3 == false)   //确保视频开启成功
+                            {
+                                string videofile3 = @"录像视频\video3.mp4";
+                                //强制I帧 Make one key frame
+                                //通道号 Channel number
+                                CHCNetSDK.NET_DVR_MakeKeyFrame(m_lUserID3, 1);
 
-                                 //开始录像 Start recording
-                                 if (!CHCNetSDK.NET_DVR_SaveRealData(m_lRealHandle3, videofile3))
-                                 {
-                                     return;
-                                 }
-                                 m_bRecord3 = true;
+                                //开始录像 Start recording
+                                if (!CHCNetSDK.NET_DVR_SaveRealData(m_lRealHandle3, videofile3))
+                                {
+                                    return;
+                                }
+                                m_bRecord3 = true;
 
-                             }
-                             else if (m_lRealHandle3 != -1 && m_bRecord3 == true)
-                             {
-                                 //停止录像 Stop recording
-                                 if (!CHCNetSDK.NET_DVR_StopSaveRealData(m_lRealHandle3))
-                                 {
-                                     return;
-                                 }
-                                 m_bRecord3 = false;
-                             }
-                             break;
-                         }
+                            }
+                            else if (m_lRealHandle3 != -1 && m_bRecord3 == true)
+                            {
+                                //停止录像 Stop recording
+                                if (!CHCNetSDK.NET_DVR_StopSaveRealData(m_lRealHandle3))
+                                {
+                                    return;
+                                }
+                                m_bRecord3 = false;
+                            }
+                            break;
+                        }
                     case "9":
-                         {
-                             if (m_lRealHandle4 != -1 && m_bRecord4 == false)   //确保视频开启成功
-                             {
-                                 string videofile4 = @"录像视频\video4.mp4";
-                                 //强制I帧 Make one key frame
-                                 //通道号 Channel number
-                                 CHCNetSDK.NET_DVR_MakeKeyFrame(m_lUserID4, 1);
+                        {
+                            if (m_lRealHandle4 != -1 && m_bRecord4 == false)   //确保视频开启成功
+                            {
+                                string videofile4 = @"录像视频\video4.mp4";
+                                //强制I帧 Make one key frame
+                                //通道号 Channel number
+                                CHCNetSDK.NET_DVR_MakeKeyFrame(m_lUserID4, 1);
 
-                                 //开始录像 Start recording
-                                 if (!CHCNetSDK.NET_DVR_SaveRealData(m_lRealHandle4, videofile4))
-                                 {
-                                     return;
-                                 }
-                                 m_bRecord4 = true;
+                                //开始录像 Start recording
+                                if (!CHCNetSDK.NET_DVR_SaveRealData(m_lRealHandle4, videofile4))
+                                {
+                                    return;
+                                }
+                                m_bRecord4 = true;
 
-                             }
-                             else if (m_lRealHandle4 != -1 && m_bRecord4 == true)
-                             {
-                                 //停止录像 Stop recording
-                                 if (!CHCNetSDK.NET_DVR_StopSaveRealData(m_lRealHandle4))
-                                 {
-                                     return;
-                                 }
-                                 m_bRecord4 = false;
-                             }
-                             break;
-                         }
+                            }
+                            else if (m_lRealHandle4 != -1 && m_bRecord4 == true)
+                            {
+                                //停止录像 Stop recording
+                                if (!CHCNetSDK.NET_DVR_StopSaveRealData(m_lRealHandle4))
+                                {
+                                    return;
+                                }
+                                m_bRecord4 = false;
+                            }
+                            break;
+                        }
                     case "10":
-                         {
+                        {
 
-                             break;
-                         }
+                            break;
+                        }
                     case "11":
-                         {
-                             if (m_lRealHandle5 != -1 && m_bRecord5 == false)   //确保视频开启成功
-                             {
-                                 string videofile5 = @"录像视频\video5.mp4";
-                                 //强制I帧 Make one key frame
-                                 //通道号 Channel number
-                                 CHCNetSDK.NET_DVR_MakeKeyFrame(m_lUserID5, 1);
+                        {
+                            if (m_lRealHandle5 != -1 && m_bRecord5 == false)   //确保视频开启成功
+                            {
+                                string videofile5 = @"录像视频\video5.mp4";
+                                //强制I帧 Make one key frame
+                                //通道号 Channel number
+                                CHCNetSDK.NET_DVR_MakeKeyFrame(m_lUserID5, 1);
 
-                                 //开始录像 Start recording
-                                 if (!CHCNetSDK.NET_DVR_SaveRealData(m_lRealHandle5, videofile5))
-                                 {
-                                     return;
-                                 }
-                                 m_bRecord5 = true;
+                                //开始录像 Start recording
+                                if (!CHCNetSDK.NET_DVR_SaveRealData(m_lRealHandle5, videofile5))
+                                {
+                                    return;
+                                }
+                                m_bRecord5 = true;
 
-                             }
-                             else if (m_lRealHandle5 != -1 && m_bRecord5 == true)
-                             {
-                                 //停止录像 Stop recording
-                                 if (!CHCNetSDK.NET_DVR_StopSaveRealData(m_lRealHandle5))
-                                 {
-                                     return;
-                                 }
-                                 m_bRecord5 = false;
-                             }
-                             break;
-                             
-                         }
-                    case "12":
-                         {
-                             if (m_lRealHandle1 != -1)
-                             {
-                                 if (!CHCNetSDK.NET_DVR_StopRealPlay(m_lRealHandle1))
-                                 {
-                                     return;
-                                 }
-                                 m_lRealHandle1 = -1;
-                             }
-                             if (!CHCNetSDK.NET_DVR_Logout(m_lUserID1))
-                             {
-                                 return;
-                             }
-                             m_lUserID1 = -1;
-                             this.panel1.BackColor = System.Drawing.Color.Gray;
-                             break;
-                         
-                         }
-                    case "13":
-                         {
-                             if (m_lRealHandle2 != -1)
-                             {
-                                 if (!CHCNetSDK.NET_DVR_StopRealPlay(m_lRealHandle2))
-                                 {
-                                     return;
-                                 }
-                                 m_lRealHandle2 = -1;
-                             }
-                             if (!CHCNetSDK.NET_DVR_Logout(m_lUserID2))
-                             {
-                                 return;
-                             }
-                             m_lUserID2 = -1;
-                             this.panel2.BackColor = System.Drawing.Color.Yellow;
-                             break;
-
-                         }
-                    case "14":
-                         {
-                             if (m_lRealHandle3 != -1)
-                             {
-                                 if (!CHCNetSDK.NET_DVR_StopRealPlay(m_lRealHandle3))
-                                 {
-                                     return;
-                                 }
-                                 m_lRealHandle3 = -1;
-                             }
-                             if (!CHCNetSDK.NET_DVR_Logout(m_lUserID3))
-                             {
-                                 return;
-                             }
-                             m_lUserID3 = -1;
-                             this.panel3.BackColor = System.Drawing.Color.Blue;
-                             break;
-
-                         }
-                    case "15":
-                         {
-                             if (m_lRealHandle4 != -1)
-                             {
-                                 if (!CHCNetSDK.NET_DVR_StopRealPlay(m_lRealHandle4))
-                                 {
-                                     return;
-                                 }
-                                 m_lRealHandle4 = -1;
-                             }
-                             if (!CHCNetSDK.NET_DVR_Logout(m_lUserID4))
-                             {
-                                 return;
-                             }
-                             m_lUserID4 = -1;
-                             this.panel4.BackColor = System.Drawing.Color.Red;
-                             break;
-
-                         }
-                    case "16":
-                         {
-                            
+                            }
+                            else if (m_lRealHandle5 != -1 && m_bRecord5 == true)
+                            {
+                                //停止录像 Stop recording
+                                if (!CHCNetSDK.NET_DVR_StopSaveRealData(m_lRealHandle5))
+                                {
+                                    return;
+                                }
+                                m_bRecord5 = false;
+                            }
                             break;
 
-                         }
+                        }
+                    case "12":
+                        {
+                            if (m_lRealHandle1 != -1)
+                            {
+                                if (!CHCNetSDK.NET_DVR_StopRealPlay(m_lRealHandle1))
+                                {
+                                    return;
+                                }
+                                m_lRealHandle1 = -1;
+                            }
+                            if (!CHCNetSDK.NET_DVR_Logout(m_lUserID1))
+                            {
+                                return;
+                            }
+                            m_lUserID1 = -1;
+                            this.panel1.BackColor = System.Drawing.Color.Gray;
+                            break;
+
+                        }
+                    case "13":
+                        {
+                            if (m_lRealHandle2 != -1)
+                            {
+                                if (!CHCNetSDK.NET_DVR_StopRealPlay(m_lRealHandle2))
+                                {
+                                    return;
+                                }
+                                m_lRealHandle2 = -1;
+                            }
+                            if (!CHCNetSDK.NET_DVR_Logout(m_lUserID2))
+                            {
+                                return;
+                            }
+                            m_lUserID2 = -1;
+                            this.panel2.BackColor = System.Drawing.Color.Yellow;
+                            break;
+
+                        }
+                    case "14":
+                        {
+                            if (m_lRealHandle3 != -1)
+                            {
+                                if (!CHCNetSDK.NET_DVR_StopRealPlay(m_lRealHandle3))
+                                {
+                                    return;
+                                }
+                                m_lRealHandle3 = -1;
+                            }
+                            if (!CHCNetSDK.NET_DVR_Logout(m_lUserID3))
+                            {
+                                return;
+                            }
+                            m_lUserID3 = -1;
+                            this.panel3.BackColor = System.Drawing.Color.Blue;
+                            break;
+
+                        }
+                    case "15":
+                        {
+                            if (m_lRealHandle4 != -1)
+                            {
+                                if (!CHCNetSDK.NET_DVR_StopRealPlay(m_lRealHandle4))
+                                {
+                                    return;
+                                }
+                                m_lRealHandle4 = -1;
+                            }
+                            if (!CHCNetSDK.NET_DVR_Logout(m_lUserID4))
+                            {
+                                return;
+                            }
+                            m_lUserID4 = -1;
+                            this.panel4.BackColor = System.Drawing.Color.Red;
+                            break;
+
+                        }
+                    case "16":
+                        {
+
+                            break;
+
+                        }
                     default:
-                         break;                                      
+                        break;
                 }
             }
             base.WndProc(ref e);
@@ -350,7 +349,7 @@ namespace Screen
             {
                 return;
             }
-          
+
         }
         public void RealDataCallBack(Int32 lRealHandle, UInt32 dwDataType, ref byte pBuffer, UInt32 dwBufSize, IntPtr pUser)
         {
@@ -389,18 +388,18 @@ namespace Screen
                 isMax = true;
                 if (thisPanel == panel1)
                 { count = 1; }
-                else if(thisPanel == panel2)
+                else if (thisPanel == panel2)
                 { count = 2; }
                 else if (thisPanel == panel3)
                 { count = 3; }
                 else if (thisPanel == panel4)
-                { count = 4; }     
+                { count = 4; }
             }
         }
-   
+
         private void showOnMonitor(int showOnMonitor)
         {
-            System.Windows.Forms.Screen [] sc;
+            System.Windows.Forms.Screen[] sc;
             sc = System.Windows.Forms.Screen.AllScreens;
             if (showOnMonitor >= sc.Length)
             {
@@ -409,7 +408,7 @@ namespace Screen
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point(sc[showOnMonitor].Bounds.Left, sc[showOnMonitor].Bounds.Top);
             // If you intend the form to be maximized, change it to normal then maximized.  
-           // this.WindowState = FormWindowState.Normal;
+            // this.WindowState = FormWindowState.Normal;
             this.WindowState = FormWindowState.Maximized;
         }
         private void ShowVideo1()
@@ -418,7 +417,7 @@ namespace Screen
             Int16 DVRPortNumber = 8000;//设备服务端口号
             string DVRUserName = "admin";//设备登录用户名
             string DVRPassword = "admin123";//设备登录密码
-            CHCNetSDK.NET_DVR_DEVICEINFO_V30 DeviceInfo1= new CHCNetSDK.NET_DVR_DEVICEINFO_V30();
+            CHCNetSDK.NET_DVR_DEVICEINFO_V30 DeviceInfo1 = new CHCNetSDK.NET_DVR_DEVICEINFO_V30();
             m_lUserID1 = CHCNetSDK.NET_DVR_Login_V30(DVRIPAddress, DVRPortNumber, DVRUserName, DVRPassword, ref DeviceInfo1);
             if (m_lUserID1 < 0)
             {
@@ -457,8 +456,8 @@ namespace Screen
         }
         private void ShowVideo2()
         {
-            string DVRIPAddress = "192.168.1.65"; //设备IP地址或者域名
-            Int16 DVRPortNumber = 8100;//设备服务端口号
+            string DVRIPAddress = "192.168.1.67"; //设备IP地址或者域名
+            Int16 DVRPortNumber = 8200;//设备服务端口号
             string DVRUserName = "admin";//设备登录用户名
             string DVRPassword = "admin123";//设备登录密码
             CHCNetSDK.NET_DVR_DEVICEINFO_V30 DeviceInfo2 = new CHCNetSDK.NET_DVR_DEVICEINFO_V30();
@@ -501,8 +500,8 @@ namespace Screen
         }
         private void ShowVideo3()
         {
-            string DVRIPAddress = "192.168.1.67"; //设备IP地址或者域名
-            Int16 DVRPortNumber = 8200;//设备服务端口号
+            string DVRIPAddress = "192.168.1.65"; //设备IP地址或者域名
+            Int16 DVRPortNumber = 8100;//设备服务端口号
             string DVRUserName = "admin";//设备登录用户名
             string DVRPassword = "admin123";//设备登录密码
             CHCNetSDK.NET_DVR_DEVICEINFO_V30 DeviceInfo3 = new CHCNetSDK.NET_DVR_DEVICEINFO_V30();
@@ -535,10 +534,10 @@ namespace Screen
             lpPreviewInfo3.bBlocked = true; //0- 非阻塞取流，1- 阻塞取流
             //public const int NET_DVR_PLAY_FORWARD = 29;//倒放切换为正放
 
-            CHCNetSDK.REALDATACALLBACK RealData2 = new CHCNetSDK.REALDATACALLBACK(RealDataCallBack);//预览实时流回调函数
-            IntPtr pUser2 = new IntPtr();//用户数据
-            m_lRealHandle2 = CHCNetSDK.NET_DVR_RealPlay_V40(m_lUserID3, ref lpPreviewInfo3, null/*RealData*/, pUser2);
-            if (m_lRealHandle2 < 0)
+            CHCNetSDK.REALDATACALLBACK RealData3 = new CHCNetSDK.REALDATACALLBACK(RealDataCallBack);//预览实时流回调函数
+            IntPtr pUser3 = new IntPtr();//用户数据
+            m_lRealHandle3 = CHCNetSDK.NET_DVR_RealPlay_V40(m_lUserID3, ref lpPreviewInfo3, null/*RealData*/, pUser3);
+            if (m_lRealHandle3 < 0)
             {
                 return;
             }
@@ -635,11 +634,6 @@ namespace Screen
             //}
         }
 
-      
 
-    
-
-
-     
     }
 }

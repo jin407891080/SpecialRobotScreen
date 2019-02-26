@@ -55,3 +55,13 @@ C:\Users\jin40\Downloads\181127_贾总机器人_Screen\Screen\Screen\obj\Debug\S
 C:\Users\jin40\Downloads\181127_贾总机器人_Screen\Screen\Screen\obj\Debug\Screen.csproj.CoreCompileInputs.cache
 C:\Users\jin40\Downloads\181127_贾总机器人_Screen\Screen\Screen\obj\Debug\Screen.exe
 C:\Users\jin40\Downloads\181127_贾总机器人_Screen\Screen\Screen\obj\Debug\Screen.pdb
+C:\Users\jin40\Source\Repos\jin407891080\SpecialRobotScreen\Screen\bin\Screen.exe.config
+C:\Users\jin40\Source\Repos\jin407891080\SpecialRobotScreen\Screen\bin\Screen.exe
+C:\Users\jin40\Source\Repos\jin407891080\SpecialRobotScreen\Screen\bin\Screen.pdb
+C:\Users\jin40\Source\Repos\jin407891080\SpecialRobotScreen\Screen\obj\Debug\Screen.csprojAssemblyReference.cache
+C:\Users\jin40\Source\Repos\jin407891080\SpecialRobotScreen\Screen\obj\Debug\Screen.Form1.resources
+C:\Users\jin40\Source\Repos\jin407891080\SpecialRobotScreen\Screen\obj\Debug\Screen.Properties.Resources.resources
+C:\Users\jin40\Source\Repos\jin407891080\SpecialRobotScreen\Screen\obj\Debug\Screen.csproj.GenerateResource.cache
+C:\Users\jin40\Source\Repos\jin407891080\SpecialRobotScreen\Screen\obj\Debug\Screen.csproj.CoreCompileInputs.cache
+C:\Users\jin40\Source\Repos\jin407891080\SpecialRobotScreen\Screen\obj\Debug\Screen.exe
+C:\Users\jin40\Source\Repos\jin407891080\SpecialRobotScreen\Screen\obj\Debug\Screen.pdb
